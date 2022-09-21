@@ -5,6 +5,7 @@ except ImportError:
 import csv
 import re;
 import itertools;
+import streamlit as st
 
 #Import des urls
 
