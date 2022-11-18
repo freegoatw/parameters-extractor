@@ -1,7 +1,6 @@
 #This script lists the most used parameters in a url list
 from urllib.parse import urlparse
 from pathlib import Path
-from detect_delimiter import detect
 
 scriptError = False
 
