@@ -1,7 +1,5 @@
 #list the most used parameters in a url list
 from urllib.parse import urlparse
-from pprint import pprint
-import csv
 
 corpuslist = [];
 
@@ -29,7 +27,6 @@ for url in corpus:
             query_counter[q] = 1;
 
 
-pprint(corpuslist);
 
 # csv export one query per line
 with open("queries.csv", 'w') as f:
