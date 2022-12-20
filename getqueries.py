@@ -18,6 +18,7 @@ else : print("zeee partii")
 try :
     with open("urls.txt", 'r') as f:
         corpus = f.read().split("\n");
+        #print(corpus)
 except :
     print("il y a un problème avec le fichier des urls")
     scriptError = True
@@ -28,10 +29,15 @@ query_counter = {};
 def get_query(url):
     url = url
     query = urlparse(url).query;
+    #print(query)
     query = query.split("&");
-    query = [x.split("=")[0] for x in query];
+    print(query)
+    #query = [x.split("=")[0] for x in query];
+    #print(query)
     query = list(set(query));
+    print(query)
     return query;
+
 
 #Check if there is a problem before
 if scriptError == False :
@@ -39,7 +45,9 @@ if scriptError == False :
     #count the number of times a parameter is used.
     for url in corpus:
         query = get_query(url);
+        #print(query)
         corpuslist.append(query);
+        print(corpuslist)
         for q in query:
             if q in query_counter:
                 query_counter[q] += 1;
